@@ -1,0 +1,21 @@
+{
+"name": "@hexlet/code",
+  "version": "1.0.0",
+  "description": "[![Actions Status](https://github.com/Andresfelipe-bot/fullstack-javascript-project-98/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/Andresfelipe-bot/fullstack-javascript-project-98/actions)",
+  "homepage": "https://github.com/Andresfelipe-bot/PROYECTO-CODICA#readme",
+  "bugs": {
+    "url": "https://github.com/Andresfelipe-bot/PROYECTO-CODICA/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Andresfelipe-bot/PROYECTO-CODICA.git"
+  },
+  "type": "module",
+  "main": "index.js",
+  "bin": {
+  "brain-games": "bin/brain-games.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
