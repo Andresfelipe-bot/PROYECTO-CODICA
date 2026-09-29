@@ -1,9 +1,12 @@
-# Ignorar dependencias
+# Dependencias
 node_modules/
 
-# Ignorar lock files si no son necesarios
+# Archivos de lock (opcional)
 package-lock.json
 
 # Ignorar archivos temporales
 *.log
 .DS_Store
+
+# Variables de entorno
+.env
