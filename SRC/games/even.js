@@ -6,7 +6,7 @@ export const playEvenGame = () => {
   console.log(`¡Hola, ${name}!`);
 
   let correctAnswers = 0;
-  while (correctAnswers < 3) {
+  while (correctAnswers < 5) {
     const number = Math.floor(Math.random() * 100) + 1;
     console.log(`Pregunta: ${number}`);
     const answer = readlineSync.question('Tu respuesta: ');
