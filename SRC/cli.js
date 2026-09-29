@@ -5,3 +5,7 @@ export const greetUser = () => {
   const name = readlineSync.question('Cual es tu nombre?: ');
   console.log(`¡Hola, ${name}!`);
 };
+
+export const farewellUser = (name) => {
+  console.log(`¡Hasta luego, ${name}!`);
+};
