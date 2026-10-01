@@ -1,0 +1,4 @@
+name = "review-readme"
+version = "1.0.0"
+description = "Revisa y valida README.md siguiendo mejores prácticas (estructura, badges, instalación, uso, tests, licencia, etc.)"
+author = "OpenCode User"
