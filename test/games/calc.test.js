@@ -58,7 +58,7 @@ describe('playCalcGame', () => {
   it('should show game instruction', () => {
     setupMocks(['Jugador'], [0.5, 0.5, 0.5]);
     playCalcGame();
-    expect(logs).toContain('¿Cual es el resultado de la expresión?');
+    expect(logs).toContain('¿Cuál es el resultado de la expresión?');
   });
 
   it('should show "¡Correcto!" for correct answer', () => {
