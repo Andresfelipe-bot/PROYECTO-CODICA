@@ -16,7 +16,7 @@ export const playSquareGame = () => {
       console.log('¡Correcto!');
       correctAnswers++;
     } else {
-      console.log(`Respuesta incorrecta! La respuesta correcta era '${correctAnswer}'.`);
+      console.log(`Respuesta incorrecta! La respuesta correcta era ${correctAnswer}.`);
       console.log(`¡Intentémoslo de nuevo, ${name}!`);
       correctAnswers = 0;
     }

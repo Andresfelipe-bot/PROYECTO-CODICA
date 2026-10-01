@@ -1,5 +1,4 @@
-import { describe, it } from 'node:test';
-import assert from 'node:assert/strict';
+import { describe, it, expect } from 'vitest';
 import { farewellUser } from '../src/cli.js';
 
 describe('farewellUser', () => {
@@ -12,7 +11,7 @@ describe('farewellUser', () => {
 
     console.log = originalLog;
 
-    assert.equal(logs.length, 1);
-    assert.equal(logs[0], '¡Hasta luego, Ana!');
+    expect(logs.length).toBe(1);
+    expect(logs[0]).toBe('¡Hasta luego, Ana!');
   });
 });
