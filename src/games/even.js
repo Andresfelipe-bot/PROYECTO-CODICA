@@ -18,7 +18,7 @@ export const playEvenGame = () => {
     } else {
       console.log(`Respuesta incorrecta! La respuesta correcta era '${correctAnswer}'.`);
       console.log(`¡Intentémoslo de nuevo, ${name}!`);
-      correctAnswers = 0;
+      return;
     }
   }
   console.log(`¡Felicidades, ${name}!`);
