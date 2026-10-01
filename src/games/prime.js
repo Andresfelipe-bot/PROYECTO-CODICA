@@ -13,7 +13,7 @@ const isPrime = (num) => {
 
 export const playPrimeGame = () => {
   console.log('¡Bienvenido a Brain Games!');
-  const name = readlineSync.question('Cual es tu nombre?: ');
+  const name = readlineSync.question('¿Cual es tu nombre? ');
   console.log(`¡Hola, ${name}!`);
   console.log('Responde "yes" si el número dado es primo. De lo contrario, responde "no".');
 

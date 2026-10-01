@@ -2,7 +2,7 @@ import readlineSync from 'readline-sync';
 
 export const playEvenGame = () => {
   console.log('Responde "yes" si el número es par, de lo contrario responde "no".');
-  const name = readlineSync.question('Cual es tu nombre?: ');
+  const name = readlineSync.question('¿Cual es tu nombre? ');
   console.log(`¡Hola, ${name}!`);
 
   let correctAnswers = 0;

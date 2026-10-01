@@ -12,7 +12,7 @@ const gcd = (a, b) => {
 
 export const playGcdGame = () => {
   console.log('¡Bienvenido a Brain Games!');
-  const name = readlineSync.question('Cual es tu nombre?: ');
+  const name = readlineSync.question('¿Cual es tu nombre? ');
   console.log(`¡Hola, ${name}!`);
   console.log('Encuentra el maximo común divisor de los números dados.');
 

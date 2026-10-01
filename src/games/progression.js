@@ -11,7 +11,7 @@ const generateProgression = (start, step, length) => {
 
 export const playProgressionGame = () => {
   console.log('¡Bienvenido a Brain Games!');
-  const name = readlineSync.question('Cual es tu nombre?: ');
+  const name = readlineSync.question('¿Cual es tu nombre? ');
   console.log(`¡Hola, ${name}!`);
   console.log('¿Qué número falta en la progresión?');
 

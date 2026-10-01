@@ -2,7 +2,7 @@ import readlineSync from 'readline-sync';
 
 export const playSquareGame = () => {
   console.log('Responde con el cuadrado del número mostrado.');
-  const name = readlineSync.question('Cual es tu nombre?: ');
+  const name = readlineSync.question('¿Cual es tu nombre? ');
   console.log(`¡Hola, ${name}!`);
 
   let correctAnswers = 0;
