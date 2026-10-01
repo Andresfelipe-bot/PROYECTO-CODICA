@@ -1,4 +1,5 @@
 import readlineSync from 'readline-sync';
+import { greetUser } from '../cli.js';
 
 // Función para verificar si un número es primo
 const isPrime = (num) => {
@@ -12,9 +13,7 @@ const isPrime = (num) => {
 };
 
 export const playPrimeGame = () => {
-  console.log('¡Bienvenido a Brain Games!');
-  const name = readlineSync.question('¿Cual es tu nombre? ');
-  console.log(`¡Hola, ${name}!`);
+  const name = greetUser();
   console.log('Responde "yes" si el número dado es primo. De lo contrario, responde "no".');
 
   let correctAnswers = 0;
@@ -30,9 +29,9 @@ export const playPrimeGame = () => {
       console.log('¡Correcto!');
       correctAnswers += 1;
     } else {
-      console.log(`'${answer}' es una respuesta incorrecta ;(. La respuesta correcta era '${correctAnswer}'.`);
+      console.log(`Respuesta incorrecta! La respuesta correcta era '${correctAnswer}'.`);
       console.log(`¡Intentémoslo de nuevo, ${name}!`);
-      return; // termina el juego en caso de error
+      return;
     }
   }
 

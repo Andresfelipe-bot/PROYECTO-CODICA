@@ -1,9 +1,9 @@
 import readlineSync from 'readline-sync';
+import { greetUser } from '../cli.js';
 
 export const playSquareGame = () => {
+  const name = greetUser();
   console.log('Responde con el cuadrado del número mostrado.');
-  const name = readlineSync.question('¿Cual es tu nombre? ');
-  console.log(`¡Hola, ${name}!`);
 
   let correctAnswers = 0;
   while (correctAnswers < 3) {
@@ -16,8 +16,8 @@ export const playSquareGame = () => {
       console.log('¡Correcto!');
       correctAnswers++;
     } else {
-      console.log(`'${answer}' es incorrecto ;(. La respuesta correcta era '${correctAnswer}'.`);
-      console.log(`¡Intentemoslo de nuevo, ${name}!`);
+      console.log(`Respuesta incorrecta! La respuesta correcta era '${correctAnswer}'.`);
+      console.log(`¡Intentémoslo de nuevo, ${name}!`);
       correctAnswers = 0;
     }
   }

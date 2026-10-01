@@ -1,4 +1,5 @@
 import readlineSync from 'readline-sync';
+import { greetUser } from '../cli.js';
 
 // Función para generar una progresión aritmética
 const generateProgression = (start, step, length) => {
@@ -10,17 +11,15 @@ const generateProgression = (start, step, length) => {
 };
 
 export const playProgressionGame = () => {
-  console.log('¡Bienvenido a Brain Games!');
-  const name = readlineSync.question('¿Cual es tu nombre? ');
-  console.log(`¡Hola, ${name}!`);
+  const name = greetUser();
   console.log('¿Qué número falta en la progresión?');
 
   let correctAnswers = 0;
 
   while (correctAnswers < 3) {
-    const start = Math.floor(Math.random() * 10) + 1; // inicio aleatorio
-    const step = Math.floor(Math.random() * 5) + 2;   // diferencia aleatoria
-    const length = 10; // progresión de 10 elementos
+    const start = Math.floor(Math.random() * 10) + 1;
+    const step = Math.floor(Math.random() * 5) + 2;
+    const length = 10;
 
     const progression = generateProgression(start, step, length);
     const hiddenIndex = Math.floor(Math.random() * length);
@@ -34,9 +33,9 @@ export const playProgressionGame = () => {
       console.log('¡Correcto!');
       correctAnswers += 1;
     } else {
-      console.log(`'${answer}' es una respuesta incorrecta ;(. La respuesta correcta era '${correctAnswer}'.`);
+      console.log(`Respuesta incorrecta! La respuesta correcta era '${correctAnswer}'.`);
       console.log(`¡Intentémoslo de nuevo, ${name}!`);
-      return; // termina el juego en caso de error
+      return;
     }
   }
 

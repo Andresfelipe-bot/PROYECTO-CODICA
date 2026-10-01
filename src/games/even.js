@@ -1,12 +1,12 @@
 import readlineSync from 'readline-sync';
+import { greetUser } from '../cli.js';
 
 export const playEvenGame = () => {
+  const name = greetUser();
   console.log('Responde "yes" si el número es par, de lo contrario responde "no".');
-  const name = readlineSync.question('¿Cual es tu nombre? ');
-  console.log(`¡Hola, ${name}!`);
 
   let correctAnswers = 0;
-  while (correctAnswers < 5) {
+  while (correctAnswers < 3) {
     const number = Math.floor(Math.random() * 100) + 1;
     console.log(`Pregunta: ${number}`);
     const answer = readlineSync.question('Tu respuesta: ');
@@ -16,8 +16,8 @@ export const playEvenGame = () => {
       console.log('¡Correcto!');
       correctAnswers++;
     } else {
-      console.log(`'${answer}' es incorrecto ;(. La respuesta correcta era '${correctAnswer}'.`);
-      console.log(`¡Intentemoslo de nuevo, ${name}!`);
+      console.log(`Respuesta incorrecta! La respuesta correcta era '${correctAnswer}'.`);
+      console.log(`¡Intentémoslo de nuevo, ${name}!`);
       correctAnswers = 0;
     }
   }

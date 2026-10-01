@@ -1,9 +1,8 @@
 import readlineSync from 'readline-sync';
+import { greetUser } from '../cli.js';
 
 export const playCalcGame = () => {
-  console.log('¡Bienvenido a Brain Games!');
-  const name = readlineSync.question('¿Cual es tu nombre?');
-  console.log(`¡Hola, ${name}!`);
+  const name = greetUser();
   console.log('¿Cual es el resultado de la expresión?');
 
   let correctAnswers = 0;
@@ -34,9 +33,9 @@ export const playCalcGame = () => {
       console.log('¡Correcto!');
       correctAnswers += 1;
     } else {
-      console.log(`'${answer}' es una respuesta incorrecta ;(. La respuesta correcta era '${correctAnswer}'.`);
-      console.log(`¡Intentemoslo de nuevo, ${name}!`);
-      return; // termina el juego en caso de error
+      console.log(`Respuesta incorrecta! La respuesta correcta era '${correctAnswer}'.`);
+      console.log(`¡Intentémoslo de nuevo, ${name}!`);
+      return;
     }
   }
 
